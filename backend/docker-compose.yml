@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  postgres:
+    image: zehracakir/postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./docker-infra/postgres/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=101010
+      - POSTGRES_USER=zehra
+      - POSTGRES_DB=iha_db      
